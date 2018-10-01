@@ -2,6 +2,12 @@ version: '2'
 
 services:
 
+    gunicorn:
+        build:
+          context: ./py
+        ports:
+          - "8000:8000"
+
     nginx:
         image: nginx:1.15.3
         ports:
@@ -11,7 +17,7 @@ services:
             - ./store/static/files:/static:ro
         links:
             - gunicorn
-            - node
+            # - node
 
     graphite:
         image: graphiteapp/graphite-statsd:1.1.3
