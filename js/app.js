@@ -3,11 +3,11 @@ const express = require("express");
 const app = express();
 const PORT = 3000;
 
-app.get("/", (req,res) => {
+app.get("/node/", (req,res) => {
 	res.send("Hello There\n");
 })
 
-app.get("/timeout", (req,res) => {
+app.get("/node/timeout", (req,res) => {
 	setTimeout(function() {
 		res.send("General Kenobi\n");
 	}, 1000);

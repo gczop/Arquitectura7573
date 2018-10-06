@@ -23,7 +23,7 @@ services:
             - ./store/static/files:/static:ro
         links:
             - gunicorn
-            # - node
+            - node
 
     graphite:
         image: graphiteapp/graphite-statsd:1.1.3
