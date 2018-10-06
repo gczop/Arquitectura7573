@@ -10,7 +10,7 @@ app.get("/", (req,res) => {
 app.get("/timeout", (req,res) => {
 	setTimeout(function() {
 		res.send("General Kenobi\n");
-	}, 1000);
+	}, 3000);
 })
 
 
