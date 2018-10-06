@@ -15,7 +15,7 @@ def hola():
 
 @app.route("/gunicorn/timeout")
 def timeout():
-	time.sleep(10)
+	time.sleep(3)
 	return "Ping"
 
 
