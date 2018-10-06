@@ -5,14 +5,14 @@ import time
 app = Flask(__name__);
 
 
-@app.route("/gunicorn/")
+@app.route("/gunicorn/ping")
 def root():
-	return "Hoola mundo\n";
+	return "echo\n";
 
 @app.route("/gunicorn/timeout")
 def timeout():
 	time.sleep(3)
-	return "Ping\n"
+	return "Hello There\n"
 
 
 if __name__ == "__main__":
