@@ -5,17 +5,17 @@ import time
 app = Flask(__name__);
 
 
-@app.route("/gunicorn/")
+@app.route("/")
 def root():
 	return "Hoola mundo\n";
 
-@app.route("/gunicorn/hola")
+@app.route("/hola")
 def hola():
 	return "Looser\n";
 
-@app.route("/gunicorn/timeout")
+@app.route("/timeout")
 def timeout():
-	time.sleep(10)
+	time.sleep(1)
 	return "Ping"
 
 
