@@ -9,14 +9,10 @@ app = Flask(__name__);
 def root():
 	return "Hoola mundo\n";
 
-@app.route("/gunicorn/hola")
-def hola():
-	return "Looser\n";
-
 @app.route("/gunicorn/timeout")
 def timeout():
 	time.sleep(3)
-	return "Ping"
+	return "Ping\n"
 
 
 if __name__ == "__main__":
