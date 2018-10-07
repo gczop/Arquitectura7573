@@ -5,6 +5,7 @@ const app = express();
 const PORT = 3000;
 
 app.get("/node/ping", (req,res) => {
+	console.log("ping");
 	res.send("echo\n");
 })
 

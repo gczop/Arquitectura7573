@@ -1,3 +1,14 @@
+## Corrida escalando con nginx
+
+Descomentar las lineas en nginx_reverse_proxy.conf para que nginx funcione como load balancer
+
+Luego correr docker:
+
+```sh
+  docker-compose up --scale node=3
+```
+
+
 # Punto de partida para el TP 1 de Arquitectura de Software (75.73) del 2do cuatrimestre de 2018
 
 > **La fecha de entrega para el informe y el código es el jueves 11/10** :bangbang:

@@ -11,8 +11,20 @@ services:
     node:
         build:
           context: ./js
-        ports:
-            - "3000:3000"
+        expose:
+            - "3000"
+
+    # node2:
+    #     build:
+    #       context: ./js
+    #     ports:
+    #         - "3000:3000"
+
+    # node3:
+    #     build:
+    #       context: ./js
+    #     ports:
+    #         - "3000:3000"
 
     nginx:
         image: nginx:1.15.3
